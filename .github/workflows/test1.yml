@@ -9,6 +9,16 @@ jobs:
     - name: Hola Mundo
       run: echo 'Hola mundo'
 
+    - name: cretae txt
+      run: touch hola.txt
+    
+    - name: set txt
+      run: echo 'Hola mundo' >> hola.txt
+    
+    - name: view txt
+      run: more hola.txt
+
+
   other:
     runs-on: ubuntu-latest
 
