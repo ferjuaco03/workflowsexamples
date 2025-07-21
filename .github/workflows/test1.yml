@@ -26,4 +26,12 @@ jobs:
     - name: LS
       run: ls -a
 
+  otherdepen:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: job depende de hola
+      needs: [hola]
+      run: echo 'Dependo del Job Hola'
+
       
