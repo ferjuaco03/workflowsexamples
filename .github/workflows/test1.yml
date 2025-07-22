@@ -27,11 +27,11 @@ jobs:
       run: ls -a
 
   otherdepen:
+    needs: [hola]
     runs-on: ubuntu-latest
 
     steps:
     - name: job depende de hola
-      needs: [hola]
       run: echo 'Dependo del Job Hola'
 
       
