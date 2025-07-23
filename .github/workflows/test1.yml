@@ -49,16 +49,15 @@ jobs:
     - name: LS
       run: |
              ls -a
-             ls -a .github
+             ls -a .github/workflows
 
 # job en el cual utilizamos un script para instalar dependencias 
 
   scriptss:
     runs-on: ubuntu-latest
+    needs: [otherdepen]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4.2.2
-
+ 
       - name: LS
         run: ls -a /.github
 
