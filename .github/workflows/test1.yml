@@ -60,5 +60,5 @@ jobs:
       - name: utilizando scripts
         run: |
             ls
-            chmod +x script.sh
+            chmod +x ./github/workflows/script.sh
             ./script.sh
