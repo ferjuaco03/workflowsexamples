@@ -49,4 +49,14 @@ jobs:
     - name: LS
       run: ls -a
 
-      
+# job en el cual utilizamos un script para instalar dependencias 
+
+scriptss:
+  runs-on: ubuntu-latest
+  steps:
+     - name: Checkout
+       uses: actions/checkout@v4.2.2
+     - name: utilizando scripts
+       run: |
+          chmod  +x script.sh
+          ./script.sh
