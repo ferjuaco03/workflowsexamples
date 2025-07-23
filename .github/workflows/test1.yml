@@ -1,5 +1,14 @@
 name: Hola Mundo
-on: [push]
+#on: [push, pull_request]  forma de colocar el evento o eventos
+
+# forma de colocar los eventos indicando las ramas con las cuales se disparara.
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   hola:
@@ -33,5 +42,11 @@ jobs:
     steps:
     - name: job depende de hola
       run: echo 'Dependo del Job Hola'
+
+    - name: Checkout
+      uses: actions/checkout@v4.2.2
+    
+    - name: LS
+      run: ls -a
 
       
