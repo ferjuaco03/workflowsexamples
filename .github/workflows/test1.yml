@@ -59,7 +59,7 @@ jobs:
     steps:
  
       - name: LS
-        run: ls -a /.github
+        run: ls -a .github/workflows/
 
       - name: utilizando scripts
         run: |
