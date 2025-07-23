@@ -57,6 +57,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
+      - name: LS
+        run: ls /github
+
       - name: utilizando scripts
         run: |
             ls
