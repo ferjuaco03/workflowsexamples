@@ -8,3 +8,4 @@ runs:
   steps:
     - name: holamundo
       run: echo 'Hola mundo desde my action'
+      shell: bash
