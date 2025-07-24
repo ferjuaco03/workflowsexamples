@@ -1,0 +1,10 @@
+name: my action
+description: Test my action
+
+# cuando creo mi propia action debo colocar composite en using para ejecutar los steps
+runs:
+  using: 'composite'
+
+  steps:
+    - name: holamundo
+      echo: 'Hola mundo desde my action'

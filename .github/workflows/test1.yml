@@ -69,3 +69,15 @@ jobs:
             ls
             chmod +x .github/workflows/script.sh
             ./.github/workflows/script.sh
+
+
+# job en el cual utilizamos un action aparte para urilizar y llamar
+
+  Myactions:
+    runs-on: ubuntu-latest
+    needs: [otherdepen]
+    steps:
+
+      - name: myaction
+        uses: ./.github/actions/my-action/
+ 
