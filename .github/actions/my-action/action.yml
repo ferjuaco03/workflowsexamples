@@ -7,4 +7,4 @@ runs:
 
   steps:
     - name: holamundo
-      echo: 'Hola mundo desde my action'
+      run: echo 'Hola mundo desde my action'
