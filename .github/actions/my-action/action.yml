@@ -16,5 +16,5 @@ runs:
       run: echo 'Hola mundo desde my action'
       shell: bash
     - name: hola Con Inputs
-      run: echo '${inputs.messages}'
+      run: echo '${{ inputs.messages }}'
       shell: bash
