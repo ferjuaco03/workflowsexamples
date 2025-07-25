@@ -1,6 +1,12 @@
 name: my action
 description: Test my action
 
+inputs:
+  messages:
+    description: Test parametro en myaction
+    required: true
+    default: Hola
+
 # cuando creo mi propia action debo colocar composite en using para ejecutar los steps
 runs:
   using: 'composite'
@@ -8,4 +14,7 @@ runs:
   steps:
     - name: holamundo
       run: echo 'Hola mundo desde my action'
+      shell: bash
+    - name: hola Con Inputs
+      run: echo '${inputs.messages}'
       shell: bash
